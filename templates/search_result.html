@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if searched %}
+        <center style="margin-top: 80px; font-size: larger; font-weight: bold; font-style: italic; color: burlywood;">Here is your search on {{ searched }}</center>
+        <center><a href="{% url 'Home' %}">Go back</a></center>
+        <section class="post">
+        <div class="flex-post">
+        {% for recipe in recipes  %}
+        <div class="main-post">
+            <div class="main-post-img">
+                <img src={{recipe.image.url}} alt="">
+            </div>
+            <div class="main-post-text">
+                <p>Posted By {{recipe.author}}</p>
+                <a href="{% url 'post' recipe.id %}"><h1>{{recipe.title}}</h1></a>
+                <p>{{recipe.body | truncatechars:200}}</p> <span> <a href="{% url 'post' recipe.id %}"><button class='rm'>Read More</button></a></span>
+
+                {% if user == recipe.author %}
+                <div>
+                    <a href="{% url 'post-update' recipe.id %}"><button class="but1">Edit</button></a>
+                    <a href="{% url 'post-delete' recipe.id %}"><button class="but2">Delete</button></a>
+                </div>
+                {% endif %}
+                <p>Posted {{recipe.date_created | timesince}} ago</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+    {% else %}
+    <center style="margin-top: 80px; font-size: larger; font-weight: bold; font-style: italic; color: burlywood;">You forgot to search for something</center>
+    <center><a href="{% url 'Home' %}">Go back</a></center>
+    {% endif %}
+
+{% endblock content %}

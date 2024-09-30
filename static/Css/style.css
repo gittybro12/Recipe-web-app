@@ -1,0 +1,607 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin-top: 60px; 
+}
+
+.navbar{
+display: flex;
+justify-content: space-around;
+background-color: rgb(222, 184, 135);
+padding: 10px 15px;
+position: fixed;
+top: 0;
+left: 0;
+overflow: hidden;
+width: 100%;
+z-index: 1000000000000000022222222222222204444444444;
+border-bottom: 2px burlywood solid;
+}
+.navbar .blog-name{
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: 900;
+    color: white;
+    padding-left: 10px;
+  padding-top: 1px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.navbar .blog-links {
+    display: flex;
+    gap: 90px;
+    list-style: none;
+    padding-top:9px ;
+}
+.navbar .blog-links a{
+    text-decoration: none;
+}
+.navbar .blog-links li{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+.navbar .blog-links li:hover{
+    text-decoration: underline;
+}
+.navbar .login button{
+padding: 10px 20px;
+outline: none;
+border: none;
+background-color: white;
+font-weight: bold;
+font-size: large;
+border-radius: 29px;
+color: burlywood;
+cursor: pointer;
+margin-right: 20px;
+}
+.navbar .login button:hover{
+background-color: rgba(238, 230, 220, 0.705);
+color: white;
+}
+
+.navbar .menu{
+    display:none;
+    cursor: pointer;
+    padding-right: 20px;
+}
+.fa-bars{
+    padding-top:5px ;
+    color: white;
+    font-size: 23px;
+}
+.dropbar-main {
+  background-color: burlywood;
+  padding:20px ;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000000;
+  overflow: hidden;
+  width: 100%;
+}
+.dropbar-main .dropbar{
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.dropbar a{
+    text-decoration: none;
+}
+.dropbar a li{
+    color: white;
+    padding: 10px;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+}
+.dropbar a li:hover{
+    text-decoration: underline;
+}
+.dropbar-main .dropbar-login button{
+padding: 10px 20px;
+border-radius: 20px;
+outline: none;
+border: none;
+color: burlywood;
+font-weight: 800;
+font-size: 15px;
+cursor: pointer;
+}
+.dropbar-main .dropbar-login button:hover{
+background-color: rgba(238, 230, 220, 0.705);
+color: white;
+}
+
+/* heros */
+.heros{
+    height: 100vh;
+    background: url(/static/img/pexels-ella-olsson-572949-1640774.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heros .text-content{
+    text-align: center;
+}
+.heros .text-content h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: 50px;
+    color: rgb(222, 184, 135);
+    margin-bottom: 10px;
+}
+.heros .text-content p{
+    font-family: "Festive", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+   color: cadetblue;
+}
+.heros .text-content button{
+    padding: 15px 55px;
+    outline: none;
+    border: none;
+    background-color: rgb(222, 184, 135);
+    border-radius: 105px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: cursive;
+    font-weight: 800;
+}
+.heros .text-content button:hover{
+    color: burlywood;
+    background-color: rgba(222, 184, 135, 0.26);
+}
+
+/* post */
+.post{
+    margin: auto;
+    width: 90%;
+    padding-top: 50px;
+
+}
+.post .h1{
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: 70px;
+    color: rgb(222, 184, 135);
+    margin-bottom: 30px;
+}
+.post .main-post{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+.post .main-post .main-post-img img{
+border: 10px solid burlywood;
+border-radius: 20px;
+}
+
+.main-post-text{
+    padding-top: 50px;
+}
+.main-post-text p{
+    margin-top: 20px;
+    font-size: 23px;
+    font-family: "Oregano", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+.main-post-text h1{
+    margin-top: 20px;
+}
+/* read more btn */
+
+.rm{
+    padding: 5px 20px;
+    color: white;
+    background-color: burlywood;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+
+/* detailed post */
+.Detailed-post{
+    margin: auto;
+    width: 80%;
+}
+.dflex{
+    margin-top: 100px;
+}
+.det-img {
+    text-align: center;
+}
+.det-img img{
+    width: 100%; 
+    border: 10px solid burlywood;
+    border-radius: 20px;
+}
+.det-text{
+    text-align: center;
+}
+.a, .c{
+    font-size: 20px;
+    font-family: "Oregano", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+.b{
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: 30px;
+    color: rgb(222, 184, 135);
+}
+
+/* form */
+
+.main-form{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.form{
+    width: 40%;
+    margin: auto;
+    background-color: burlywood;
+    border-radius: 20px;
+}
+.form h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin: 40px 0px;
+}
+.center-form{
+    display: flex;
+    justify-content: center;
+}
+ .form-title input{
+border-radius: 20px;
+padding: 10px;
+width: 90%;
+border: none;
+outline: none;
+font-size: 17px;
+margin-bottom: 50px;
+
+}
+.form-title label{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: larger;
+}
+.form-body label{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: larger;
+}
+.form-body textarea{
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+}
+.form-image label{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-size: larger;
+}
+
+.image-field input[type="file"] {
+    display: none;
+}
+.image-field .custom-file-upload {
+    display: inline-block; 
+    padding: 5px 20px; 
+    cursor: pointer; 
+    background-color: white; 
+    color: burlywood; 
+    border-radius: 5px; 
+    border: none; 
+    font-size: 16px; 
+}
+.image-field label:hover {
+    background-color: #f0f0f0; 
+}
+.submit{
+    padding: 10px 20px;
+    margin: 20px 0px;
+    outline: none;
+    border: none;
+    background-color: white;
+    color: burlywood;
+    display: flex;
+    position: relative;
+    left: 40%;
+}
+/* edit and delete button */
+.but1, .but2{
+    padding: 10px 20px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    background-color: burlywood;
+    color: white;
+    margin-right: 5px;
+}
+ /* searchbar */
+
+ 
+    .formbar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        
+    }
+.formbar input{
+    width: 25%;
+    margin-right: 20px;
+    border-radius: 25px;
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    background-color: burlywood;
+    font-size: large;
+
+}
+.formbar button{
+    padding: 20px 30px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: #46414123;
+    color: burlywood;
+    font-size: large;
+}
+.wh{
+    width: 500px;
+    height: 350px;
+}
+
+/* registeration form */
+.main-register-form{
+display: flex;
+ align-items: center;
+ justify-content: center;
+height: 80vh;
+margin-top: 100px;
+}
+.register-form{
+    background-color: burlywood;
+    width: 20%;
+    padding: 20px 50px 20px 50px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.register-form input{
+    width: 100%;
+    margin-bottom: 50px;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
+}
+.register-form h2{
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.register-form label{
+    color: white;
+    font-size: 20px;
+}
+.red{
+    color: red;
+}
+
+.regbut{
+    width: 50% !important; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px !important;
+    color: rgb(201, 160, 108);
+    font-weight: bold;
+}
+.register-form p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+/* login form */
+.main-login-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 20px;
+}
+.login-flex{
+    width: 20%;
+    background-color: burlywood;
+    padding: 20px 50px 20px 50px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login-flex input{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.login-flex h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login-flex label{
+    color: white;
+    font-size: 20px;
+}
+.login-flex ::placeholder{
+    color: burlywood;
+}
+.login-but{
+    padding: 10px 25px;
+    width: 50%;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: rgb(201, 160, 108);
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.login-flex p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+@media screen and (max-width:767px) {
+.navbar .blog-links{
+    display: none;
+}
+.navbar .login button{
+    display: none;
+}
+.navbar{
+    justify-content: space-between;
+}
+
+.navbar .menu{
+    display: block;
+}
+.main-post-text{
+    width:fit-content;
+  }
+.post .main-post{
+    flex-direction: column;
+    text-align: center;
+}
+.main-post-text{
+    width: fit-content;
+  }
+  .main-post-text p{
+    font-size: 80px;
+}
+
+
+}
+@media screen and (max-width:1297px){
+    .register-form{
+       width: 50%;
+       margin-top: 60px;
+    }
+    .login-flex{
+        width: 50%;
+        margin-top: 60px;
+     }
+}
+@media screen and (max-width:1199px){
+
+    .main-post-text{
+        padding-top: 0px;
+    }
+    .main-post-text p{
+        margin-top: 0px;
+        font-size: 23px;
+        font-family: "Oregano", cursive;
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+}
+@media screen and (max-width:975px){
+    .post .main-post .main-post-img img{
+        width: 100%;
+    }
+    /* .main-post-text{
+      width: 60%;
+    } */
+    .formbar input{
+        width: 85%;
+    }
+    .post .main-post{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 100px;
+    }
+    .main-post-text p{
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width:1072px){
+    .post .h1{
+        font-size: 45px;
+    }
+    .body-field textarea{
+        width: 300px;
+    }
+    .form{
+        width: 90%;
+    }
+}
+@media screen and (min-width:1000px){
+    .det-img img{
+        width: 45%; 
+    }
+    .a, .b, .c{
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width:600px){
+    .register-form{
+        width: 90%;
+     }
+     .register-form input{
+        margin-bottom: 20px;
+     }
+     .login-flex{
+        width: 90%;
+     }
+     .login-flex input{
+        margin-bottom: 20px;
+     }
+     .login-flex p{
+        font-size: 15px;
+     }
+}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+  {% block content %}
+<section class="heros">
+<div class="text-content">
+<h1>Discover and Share Recipes</h1>
+<p>Welcome to mama's recipe, where you can discover and share Recipes, ranging from continental dishes to local delicacies around the world</p>
+<a href="#discover"><button>Discover</button></a>
+</div>
+</section>
+
+<section class="post" id="discover">
+
+    <h1 class="h1">Discover Recipes</h1>
+
+    <form action="{% url 'search-result' %}" class="formbar" method="POST">
+        {% csrf_token %}
+        <input type="search" placeholder="Search recipe"  name="searched" >
+        <a href=""><button>Search</button></a>
+    </form>
+
+    <div class="flex-post">
+        {% for post in posts  %}
+        <div class="main-post">
+            <div class="main-post-img">
+                <img src={{post.image.url}} alt="" class="wh">
+            </div>
+            <div class="main-post-text">
+                <p>Posted By {{post.author}}</p>
+                <a href="{% url 'post' post.id %}"><h1>{{post.title}}</h1></a>
+                <p>{{post.body | truncatechars:200}}</p> <span> <a href="{% url 'post' post.id %}"><button class='rm'>Read More</button></a></span>
+
+                {% if user == post.author %}
+                <div>
+                    <a href="{% url 'post-update' post.id %}"><button class="but1">Edit</button></a>
+                    <a href="{% url 'post-delete' post.id %}"><button class="but2">Delete</button></a>
+                </div>
+                {% endif %}
+                <p>Posted {{post.date_created | timesince}} ago</p>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+{% endblock content %}

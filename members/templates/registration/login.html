@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="POST" class="main-login-flex" autocomplete="off">
+    {% csrf_token %}
+    <div class="login-flex">
+        <h2>LOGIN HERE</h2>
+        <div class="login-name">
+            <label for="name">Username</label>
+            <br>
+            <input type="text" name="username" placeholder="Enter username">
+        </div>
+        <div class="login-password">
+            <label for="name">Password</label>
+            <br>
+            <input type="password" name="password" placeholder="Enter password">
+        </div>
+        {% for message in messages  %}
+            <bold class="login-message">{{message}}</bold>
+        {% endfor %}
+        <br><br>
+        <button class="login-but">Submit</button>
+        <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
+    </div>
+</form>
+{% endblock content %}

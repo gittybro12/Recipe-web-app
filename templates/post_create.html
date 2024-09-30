@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form action="" method="post" class="main-form" enctype="multipart/form-data">
+    <div class="form">
+    <h1>Post a Recipe</h1>
+    {% csrf_token %}
+    <div class="center-form">
+        <div>
+   <div class="form-title">
+    <label for="{{ form.title.id_for_label }}">{{form.title.label_tag}}</label>
+    <div>
+        {{form.title}}
+    </div>
+    <small class="help-text">{{form.title.help_text}}</small>
+   </div>
+   {% for error in form.title.errors %}
+   <div>
+    <p>{{error}}</p>
+   </div>
+   {% endfor %}
+   <div class="form-body">
+<label for="{{form.body.id_for_label}}">{{form.body.label_tag}}</label>
+    <div class="body-field">
+        {{form.body}}
+    </div>
+    <small class="help-text">{{form.body.help_text}}</small>
+ {% for error in form.body.errors  %}
+   <div>
+    <p>{{error}}</p>
+   </div>
+ {% endfor %}
+   </div>
+   <div class="form-image">
+    <label for="{{form.image.id_for_label}}">{{form.image.label_tag}}</label>
+    <div class="image-field">
+        <label class="custom-file-upload">
+            <p>Choose File</p>
+            {{ form.image }}
+        </label>
+    </div>
+   </div>
+    <button class="submit">Submit</button>
+</div>
+</div>
+</div>
+  </form>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

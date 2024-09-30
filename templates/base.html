@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "Css/style.css" %}">
+    <script src=" {% static "script.js" %}" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Festive&family=Oregano:ital@0;1&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="postion">
+        {% if user.is_authenticated %}
+  <nav class="navbar">
+            <div class="blog-name"> 
+                <p>MaMa's Recipe</p>
+            </div>
+            <div>
+                <ul class="blog-links">
+                    <a href="{% url 'Home' %}"><li>Home</li></a>
+                    <a href='{% url "post-create" %}'><li>Create Post</li></a>
+                    <a href="#"><li>Gallary</li></a>
+                    
+                </ul>
+            </div>
+           <div class="login">
+           <a href="{% url "logout" %}"><button>Logout</button></a> 
+           </div>
+           <div class="menu">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <section class="dropbar-main">
+<div class="dropbar">
+    <ul class="sid">
+    <a href="{% url 'Home' %}" class="sod"><li>Home</li></a>
+    <a href="{% url "post-create" %}" class="sod" ><li>Create Post</li></a>
+    <a href="#" class="sod"><li>Gallary</li></a>
+</ul>
+</div>
+<div class="dropbar-login">
+    <a href="{% url "logout" %}"><button class="sod">Logout</button></a> 
+    </div>
+</section>
+{% endif %}
+
+    {% block content %}
+    
+    {% endblock content %}
+
+</body>
+</html>  

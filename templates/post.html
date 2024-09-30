@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="Detailed-post">
+    <div class="dflex">
+        <div class="flex-detail">
+            <div class="det-img">
+                <img src={{post.image.url}} alt="" >
+            </div>
+            <div class="det-text">
+                <p class="a">Author: {{ post.author }}</p>
+                <h2 class="b">{{ post.title }}</h2>
+                <p class="c">{{ post.body }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
