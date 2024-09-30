@@ -60,23 +60,3 @@ def search(request):
 
 
 
-# class PostCreateView(CreateView):
-#     model = Post
-#     template_name = 'post_create.html'  # Path to your template
-#     fields = ['title', 'body']  # Fields to include in the form
-#     success_url = reverse_lazy('Home')
-
-#     def form_valid(self, form):
-#         # Automatically set the currently logged-in user as the author
-#         form.instance.author = self.request.user
-#         return super().form_valid(form)
-    
-# class PostDeleteView( DeleteView):
-#     model = Post
-#     template_name = 'post_confirm_delete.html'
-#     success_url = reverse_lazy('Home')  # Redirect to the list page after deletion
-
-#     def test_func(self):
-#         # Ensure that only the author of the post can delete it
-#         post = self.get_object()
-#         return self.request.user == post.author
